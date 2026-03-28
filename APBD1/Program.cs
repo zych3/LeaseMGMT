@@ -29,9 +29,9 @@ class Program
         services.AddSingleton(appOpts);
         services.AddDbContext<AppDbContext>(
             o => o.UseSqlite("Data Source=app-prod.db"));
-        services.AddScoped<UserRepository>();
-        services.AddScoped<DeviceRepository>();
-        services.AddScoped<LeaseRepository>();
+        services.AddSingleton<UserRepository>();
+        services.AddSingleton<DeviceRepository>();
+        services.AddSingleton<LeaseRepository>();
 
         await using var provider = services.BuildServiceProvider();
 
