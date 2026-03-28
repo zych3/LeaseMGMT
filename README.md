@@ -27,19 +27,9 @@ Repositories
 
 ## Usage 
 ```shell
-Commands:
-  add-student      Add a new student
-  add-employee     Add a new employee
-  add-laptop       Register a new laptop
-  add-projector    Register a new projector
-  add-camera       Register a new camera
-  list-devices     List all equipment
-  list-available   List available equipment
-  lease            Lease equipment to a user
-  return           Return leased equipment
-  set-unavailable  Mark equipment as unavailable
-  user-leases      List active leases for a user
-  overdue          List overdue leases
-  report           Show summary report
-  exit / :q        Quit
+git clone https://github.com/zych3/LeaseMGMT.git
+cd LeaseMGMT/APBD1
+dotnet ef migrations add "Create" 
+dotnet ef database update
+dotnet run 
 ```
